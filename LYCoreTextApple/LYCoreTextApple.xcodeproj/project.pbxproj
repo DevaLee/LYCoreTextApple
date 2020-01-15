@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4FC4832A23CF2617007E8990 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4832923CF2617007E8990 /* AppDelegate.m */; };
-		4FC4832D23CF2617007E8990 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4832C23CF2617007E8990 /* SceneDelegate.m */; };
 		4FC4833023CF2617007E8990 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4832F23CF2617007E8990 /* ViewController.m */; };
 		4FC4833323CF2617007E8990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4833123CF2617007E8990 /* Main.storyboard */; };
 		4FC4833523CF2618007E8990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4833423CF2618007E8990 /* Assets.xcassets */; };
@@ -19,6 +18,7 @@
 		4FC4836323CF2677007E8990 /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4835E23CF2676007E8990 /* CTView.m */; };
 		4FC4836423CF2677007E8990 /* core_text_arch_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4836023CF2676007E8990 /* core_text_arch_2x.png */; };
 		4FC4836523CF2677007E8990 /* CTLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4836223CF2676007E8990 /* CTLineView.m */; };
+		5101A0A423CF5CFA007B07D2 /* CTMultiColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,6 @@
 		4FC4832523CF2617007E8990 /* LYCoreTextApple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYCoreTextApple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC4832823CF2617007E8990 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FC4832923CF2617007E8990 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4FC4832B23CF2617007E8990 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		4FC4832C23CF2617007E8990 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		4FC4832E23CF2617007E8990 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4FC4832F23CF2617007E8990 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4FC4833223CF2617007E8990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +60,8 @@
 		4FC4836023CF2676007E8990 /* core_text_arch_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = core_text_arch_2x.png; sourceTree = "<group>"; };
 		4FC4836123CF2676007E8990 /* CTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTView.h; sourceTree = "<group>"; };
 		4FC4836223CF2676007E8990 /* CTLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTLineView.m; sourceTree = "<group>"; };
+		5101A0A223CF5CFA007B07D2 /* CTMultiColumnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMultiColumnView.h; sourceTree = "<group>"; };
+		5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMultiColumnView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +115,6 @@
 				4FC4835D23CF2676007E8990 /* CoreText */,
 				4FC4832823CF2617007E8990 /* AppDelegate.h */,
 				4FC4832923CF2617007E8990 /* AppDelegate.m */,
-				4FC4832B23CF2617007E8990 /* SceneDelegate.h */,
-				4FC4832C23CF2617007E8990 /* SceneDelegate.m */,
 				4FC4832E23CF2617007E8990 /* ViewController.h */,
 				4FC4832F23CF2617007E8990 /* ViewController.m */,
 				4FC4833123CF2617007E8990 /* Main.storyboard */,
@@ -153,6 +151,8 @@
 				4FC4835E23CF2676007E8990 /* CTView.m */,
 				4FC4835F23CF2676007E8990 /* CTLineView.h */,
 				4FC4836223CF2676007E8990 /* CTLineView.m */,
+				5101A0A223CF5CFA007B07D2 /* CTMultiColumnView.h */,
+				5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */,
 				4FC4836023CF2676007E8990 /* core_text_arch_2x.png */,
 			);
 			path = CoreText;
@@ -293,8 +293,8 @@
 				4FC4836523CF2677007E8990 /* CTLineView.m in Sources */,
 				4FC4832A23CF2617007E8990 /* AppDelegate.m in Sources */,
 				4FC4833B23CF2618007E8990 /* main.m in Sources */,
-				4FC4832D23CF2617007E8990 /* SceneDelegate.m in Sources */,
 				4FC4836323CF2677007E8990 /* CTView.m in Sources */,
+				5101A0A423CF5CFA007B07D2 /* CTMultiColumnView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LYCoreTextApple/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,6 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LYCoreTextApple/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
