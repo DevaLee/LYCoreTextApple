@@ -19,6 +19,8 @@
 		4FC4836423CF2677007E8990 /* core_text_arch_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4836023CF2676007E8990 /* core_text_arch_2x.png */; };
 		4FC4836523CF2677007E8990 /* CTLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4836223CF2676007E8990 /* CTLineView.m */; };
 		5101A0A423CF5CFA007B07D2 /* CTMultiColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */; };
+		5101A0A723CF5F50007B07D2 /* CTLineBreaking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A623CF5F50007B07D2 /* CTLineBreaking.m */; };
+		5101A0AA23CF6BF8007B07D2 /* CTParagraphStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A923CF6BF8007B07D2 /* CTParagraphStyleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,10 @@
 		4FC4836223CF2676007E8990 /* CTLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTLineView.m; sourceTree = "<group>"; };
 		5101A0A223CF5CFA007B07D2 /* CTMultiColumnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMultiColumnView.h; sourceTree = "<group>"; };
 		5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMultiColumnView.m; sourceTree = "<group>"; };
+		5101A0A523CF5F50007B07D2 /* CTLineBreaking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLineBreaking.h; sourceTree = "<group>"; };
+		5101A0A623CF5F50007B07D2 /* CTLineBreaking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTLineBreaking.m; sourceTree = "<group>"; };
+		5101A0A823CF6BF8007B07D2 /* CTParagraphStyleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTParagraphStyleView.h; sourceTree = "<group>"; };
+		5101A0A923CF6BF8007B07D2 /* CTParagraphStyleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTParagraphStyleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,10 @@
 				4FC4836223CF2676007E8990 /* CTLineView.m */,
 				5101A0A223CF5CFA007B07D2 /* CTMultiColumnView.h */,
 				5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */,
+				5101A0A523CF5F50007B07D2 /* CTLineBreaking.h */,
+				5101A0A623CF5F50007B07D2 /* CTLineBreaking.m */,
+				5101A0A823CF6BF8007B07D2 /* CTParagraphStyleView.h */,
+				5101A0A923CF6BF8007B07D2 /* CTParagraphStyleView.m */,
 				4FC4836023CF2676007E8990 /* core_text_arch_2x.png */,
 			);
 			path = CoreText;
@@ -290,6 +300,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FC4833023CF2617007E8990 /* ViewController.m in Sources */,
+				5101A0A723CF5F50007B07D2 /* CTLineBreaking.m in Sources */,
+				5101A0AA23CF6BF8007B07D2 /* CTParagraphStyleView.m in Sources */,
 				4FC4836523CF2677007E8990 /* CTLineView.m in Sources */,
 				4FC4832A23CF2617007E8990 /* AppDelegate.m in Sources */,
 				4FC4833B23CF2618007E8990 /* main.m in Sources */,
