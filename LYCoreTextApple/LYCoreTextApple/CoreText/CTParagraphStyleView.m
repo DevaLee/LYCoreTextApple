@@ -19,7 +19,7 @@
     CGContextScaleCTM(context, 1.0, -1.0);
     CGContextSetTextMatrix(context, CGAffineTransformIdentity);
     
-    CFStringRef fontName = CFSTR("Didot Italic");
+    CFStringRef fontName = CFSTR("Didot-Italic");
     CGFloat pointSize = 24.0;
     
     CFStringRef string = CFSTR("Hello, World! I know nothing in the world that has as much power as a word. Sometimes I write one, and I look at it, until it begins to shine.");
@@ -33,6 +33,7 @@
     CTFrameRef frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), path, NULL);
     
     CTFrameDraw(frame, context);
+    
     CFRelease(frame);
     CGPathRelease(path);
     CFRelease(framesetter);
