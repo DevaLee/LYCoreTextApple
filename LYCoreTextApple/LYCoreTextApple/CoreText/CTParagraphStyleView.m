@@ -33,6 +33,17 @@
     CTFrameRef frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), path, NULL);
     
     CTFrameDraw(frame, context);
+
+
+
+    CGImageRef img = [UIImage imageNamed: @"core_text_arch_2x"].CGImage;
+
+    CGContextDrawImage(context, CGRectMake(100, 700, 200, 200), img);
+
+    UIImage *contentImage = UIGraphicsGetImageFromCurrentImageContext();
+
+
+
     CFRelease(frame);
     CGPathRelease(path);
     CFRelease(framesetter);
