@@ -30,6 +30,7 @@
 
 -(void)setImageArray:(NSArray *)imageArray {
     _imageArray = imageArray;
+    [self fillImagePosition];
 }
 // 计算图片的坐标
 - (void)fillImagePosition {

@@ -7,7 +7,10 @@
 //
 
 #import "ViewController.h"
-
+#import "CTDisplayView.h"
+#import "CTFrameParserConfig.h"
+#import "CTFrameParser.h"
+#import "UIView+frameAdjust.h"
 @interface ViewController ()
 
 @end
@@ -16,7 +19,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   
+    [self setupUserInterface];
+    
+    
+    
+}
+
+-(void)setupUserInterface {
+    
+    CTDisplayView *displayView = [[CTDisplayView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:displayView];
+    
+    CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
+    config.width = displayView.frame.size.width;
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"json"];
+    CoreTextData *data = [CTFrameParser parseTemplateFile:path config:config];
+    displayView.data = data;
+    displayView.y = 20;
+    displayView.height = data.height + 20;
+    displayView.backgroundColor = [UIColor whiteColor];
+    
+    
+
 }
 
 

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CTFrameParser : NSObject
 + (NSMutableDictionary *)attributesWithConfig:(CTFrameParserConfig *)config;
-
++ (CoreTextData *)parseTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config;
 @end
 
 NS_ASSUME_NONNULL_END
