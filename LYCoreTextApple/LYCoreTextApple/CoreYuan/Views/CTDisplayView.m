@@ -47,12 +47,12 @@ typedef enum CTDisplayViewState: NSInteger {
     }
     CTFrameDraw(_data.ctFrame, context);
     
-//    for (CoreTextImageData *imageData in self.data.imageArray) {
-//        UIImage *image = [UIImage imageNamed:imageData.name];
-//        if (image) {
-//            CGContextDrawImage(context, imageData.imagePosition, image.CGImage);
-//        }
-//    }
+    for (CoreTextImageData *imageData in self.data.imageArray) {
+        UIImage *image = [UIImage imageNamed:imageData.name];
+        if (image) {
+            CGContextDrawImage(context, imageData.imagePosition, image.CGImage);
+        }
+    }
     
 }
 

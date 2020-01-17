@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CoreTextImageData : NSObject
 
 @property (strong, nonatomic) NSString *name;
+// 图片的起始位置
 @property (assign,nonatomic) int position;
 // 此坐标是 CoreText 的坐标系，而不是UIKit的坐标系
 @property (nonatomic) CGRect imagePosition;

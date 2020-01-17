@@ -40,8 +40,9 @@
 
     NSArray *lines = (NSArray *)CTFrameGetLines(_ctFrame);
     NSUInteger lineCount = [lines count];
+    
+    // 获取每一行的origin（起点）
     CGPoint lineOrigins[lineCount];
-
     CTFrameGetLineOrigins(self.ctFrame, CFRangeMake(0, 0), lineOrigins);
 
     int imgIndex = 0;
@@ -53,15 +54,19 @@
         }
 
         CTLineRef line = (__bridge CTLineRef)lines[i];
+        // 获取CTLine中的CTRun
         NSArray *runObjArray = (NSArray *)CTLineGetGlyphRuns(line);
+        NSLog(@"runObjArrayCount: %ld", runObjArray.count); // 2,1,4,2,3,1,1,3
         for (id runObj in runObjArray) {
             CTRunRef run = (__bridge CTRunRef)runObj;
             NSDictionary *runAttributes = (NSDictionary *)CTRunGetAttributes(run);
+            
+            //如果不是图片 则继续遍历
             CTRunDelegateRef delegate = (__bridge CTRunDelegateRef)[runAttributes valueForKey:(id)kCTRunDelegateAttributeName];
             if (delegate == nil) {
                 continue;
             }
-
+            // 取出图片信息
             NSDictionary *metaDic = CTRunDelegateGetRefCon(delegate);
             if (![metaDic isKindOfClass:[NSDictionary class]]) {
                 continue;

@@ -26,28 +26,26 @@ static CGFloat widthCallback(void *ref) {
     CGFloat fontSize = config.fontSize;
     CTFontRef fontRef = CTFontCreateWithName((CFStringRef)@"ArialMT", fontSize, NULL);
     CGFloat lineSpacing = config.lineSpace;
-
-    const CFIndex kNumberOfSetting = 3;
-    CTParagraphStyleSetting theSettings[kNumberOfSetting] = {
-        {kCTParagraphStyleSpecifierLineSpacingAdjustment, sizeof(CGFloat), &lineSpacing},
-        {kCTParagraphStyleSpecifierMaximumLineHeight, sizeof(CGFloat),&lineSpacing},
-        {kCTParagraphStyleSpecifierMinimumLineHeight, sizeof(CGFloat),&lineSpacing}
+    const CFIndex kNumberOfSettings = 3;
+    CTParagraphStyleSetting theSettings[kNumberOfSettings] = {
+        { kCTParagraphStyleSpecifierLineSpacingAdjustment, sizeof(CGFloat), &lineSpacing },
+        { kCTParagraphStyleSpecifierMaximumLineSpacing, sizeof(CGFloat), &lineSpacing },
+        { kCTParagraphStyleSpecifierMinimumLineSpacing, sizeof(CGFloat), &lineSpacing }
     };
-
-    CTParagraphStyleRef theParagraphRef = CTParagraphStyleCreate(theSettings, kNumberOfSetting);
-
-
-    UIColor *textColor = config.textColor;
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    
+    CTParagraphStyleRef theParagraphRef = CTParagraphStyleCreate(theSettings, kNumberOfSettings);
+    
+    UIColor * textColor = config.textColor;
+    
+    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
     dict[(id)kCTForegroundColorAttributeName] = (id)textColor.CGColor;
     dict[(id)kCTFontAttributeName] = (__bridge id)fontRef;
     dict[(id)kCTParagraphStyleAttributeName] = (__bridge id)theParagraphRef;
-
+    
     CFRelease(theParagraphRef);
     CFRelease(fontRef);
     return dict;
 }
-
 + (CoreTextData *)parseTemplateFile:(NSString *)path
                              config:(CTFrameParserConfig *)config {
     NSMutableArray *imageArray = [NSMutableArray array];
@@ -93,7 +91,7 @@ static CGFloat widthCallback(void *ref) {
                        "name" : "coretext-image-2.jpg"
                      }
                      */
-                    
+
                     // 得到一个含有空白占位符和图片信息的富文本
                     NSAttributedString *as = [self parseImageDataFromNSDictionary:dict config:config];
                     [result appendAttributedString:as];
@@ -125,6 +123,7 @@ static CGFloat widthCallback(void *ref) {
     // 使用0xFFFC作为空白的占位符,
     unichar objectReplacementChar = 0xFFFC;
     NSString *content = [NSString stringWithCharacters:&objectReplacementChar length:1];
+    // 图片使用默认的文字属性
     NSDictionary *attributes = [self attributesWithConfig:config];
     NSMutableAttributedString *space = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
     // 将 attributedString 与 CTRunDelegate 进行属性绑定
@@ -137,15 +136,14 @@ static CGFloat widthCallback(void *ref) {
  解析文字信息
  */
 + (NSAttributedString *)parseAttributedContentFromNSDictionary:(NSDictionary *)dict
-                                                        config: (CTFrameParserConfig *)config {
-    
+                                                        config:(CTFrameParserConfig*)config {
     NSMutableDictionary *attributes = [self attributesWithConfig:config];
-    // set Color
+    // set color
     UIColor *color = [self colorFromTemplate:dict[@"color"]];
     if (color) {
         attributes[(id)kCTForegroundColorAttributeName] = (id)color.CGColor;
     }
-    // set Font
+    // set font size
     CGFloat fontSize = [dict[@"size"] floatValue];
     if (fontSize > 0) {
         CTFontRef fontRef = CTFontCreateWithName((CFStringRef)@"ArialMT", fontSize, NULL);
@@ -153,9 +151,7 @@ static CGFloat widthCallback(void *ref) {
         CFRelease(fontRef);
     }
     NSString *content = dict[@"content"];
-    NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:content attributes:attributes];
-    
-    return attrString;
+    return [[NSAttributedString alloc] initWithString:content attributes:attributes];
 }
 
 + (UIColor *)colorFromTemplate:(NSString *)name {
