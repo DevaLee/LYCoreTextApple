@@ -112,9 +112,9 @@ static CGFloat widthCallback(void *ref) {
     // 初始化，分配空间
     memset(&callbacks, 0, sizeof(CTRunDelegateCallbacks));
     callbacks.version = kCTRunDelegateVersion1;
-    callbacks.getAscent = ascentCallback;
-    callbacks.getDescent = descentCallback;
-    callbacks.getWidth = widthCallback;
+    callbacks.getAscent = ascentCallback; // 图片的高度
+    callbacks.getDescent = descentCallback; // 图片的descent = 0
+    callbacks.getWidth = widthCallback; // 图片的宽度
     
     
     // 将图片信息保存到CTRunDelegate中
