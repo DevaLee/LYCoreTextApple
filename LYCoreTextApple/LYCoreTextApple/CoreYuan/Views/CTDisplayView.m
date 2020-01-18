@@ -25,10 +25,69 @@ typedef enum CTDisplayViewState: NSInteger {
 
 @implementation CTDisplayView
 
+
+-(instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self setupEvents];
+    }
+    return self;
+}
+
+#pragma mark -- set
+
 -(void)setData:(CoreTextData *)data {
     _data = data;
     self.state = CTDisplayViewStateNormal;
 }
+
+-(void)setState:(CTDisplayViewState)state {
+    if (_state == state) {
+        return;
+    }
+    _state = state;
+    if (_state == CTDisplayViewStateNormal) {
+        _selectionStartPosition = -1;
+        _selectionEndPosition = -1;
+
+    }
+}
+#pragma mark -- Set up
+
+-(void)setupEvents {
+    UITapGestureRecognizer *tapRecoginzer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userTapGestureDetected:)];
+    [self addGestureRecognizer:tapRecoginzer];
+
+    UILongPressGestureRecognizer *longPressRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(userLongPressedGestureDected:)];
+    [self addGestureRecognizer:longPressRecognizer];
+
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(userPanGestureDetected:)];
+    [self addGestureRecognizer:panGesture];
+
+    self.userInteractionEnabled = YES;
+}
+
+#pragma mark -- UITapGestureAction
+- (void)userTapGestureDetected:(UITapGestureRecognizer *)tapGesture {
+    CGPoint point = [tapGesture locationInView:self];
+    if (_state == CTDisplayViewStateNormal) {
+        for (CoreTextImageData *imageData in self.data.imageArray) {
+            // 翻转坐标系，因为imageData中的坐标是CoreText的坐标系
+            CGRect imageRect = imageData.imagePosition;
+            CGPoint imagePosition = imageRect.origin;
+        }
+    }
+}
+
+- (void)userLongPressedGestureDected:(UITapGestureRecognizer *)tapGesture {
+
+}
+
+- (void)userPanGestureDetected:(UIPanGestureRecognizer *)panGesture {
+
+}
+
+
+#pragma mark -- DrawRect
 
 -(void)drawRect:(CGRect)rect {
     [super drawRect:rect];
@@ -47,12 +106,12 @@ typedef enum CTDisplayViewState: NSInteger {
     }
     CTFrameDraw(_data.ctFrame, context);
     
-//    for (CoreTextImageData *imageData in self.data.imageArray) {
-//        UIImage *image = [UIImage imageNamed:imageData.name];
-//        if (image) {
-//            CGContextDrawImage(context, imageData.imagePosition, image.CGImage);
-//        }
-//    }
+    for (CoreTextImageData *imageData in self.data.imageArray) {
+        UIImage *image = [UIImage imageNamed:imageData.name];
+        if (image) {
+            CGContextDrawImage(context, imageData.imagePosition, image.CGImage);
+        }
+    }
     
 }
 

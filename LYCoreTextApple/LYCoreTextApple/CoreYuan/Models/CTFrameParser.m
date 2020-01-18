@@ -9,6 +9,7 @@
 #import "CTFrameParser.h"
 #import <UIKit/UIKit.h>
 #import "CoreTextImageData.h"
+#import "CoreTextLinkData.h"
 @implementation CTFrameParser
 static CGFloat ascentCallback(void *ref) {
     return [(NSNumber *)[(__bridge NSDictionary *)ref objectForKey:@"height"] floatValue];
@@ -95,6 +96,22 @@ static CGFloat widthCallback(void *ref) {
                     // 得到一个含有空白占位符和图片信息的富文本
                     NSAttributedString *as = [self parseImageDataFromNSDictionary:dict config:config];
                     [result appendAttributedString:as];
+                } else if([type isEqualToString:@"link"]){
+                    NSUInteger startPos = result.length;
+                    // 
+                    NSAttributedString *as = [self parseAttributedContentFromNSDictionary:dict config:config];
+                    [result appendAttributedString:as];
+
+                    // 创建 CoreTextLinkData
+                    NSUInteger length = result.length - startPos;
+                    NSRange linkRange = NSMakeRange(startPos, length);
+                    CoreTextLinkData *linkData = [[CoreTextLinkData alloc] init];
+                    linkData.title = dict[@"content"];
+                    linkData.url = dict[@"url"];
+                    linkData.range = linkRange;
+
+                    [linkArray addObject:linkData];
+
                 }
             }
         }
@@ -102,6 +119,8 @@ static CGFloat widthCallback(void *ref) {
     return result;
     
 }
+
+
 
 /*
     解析图片信息

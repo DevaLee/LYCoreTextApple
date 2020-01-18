@@ -34,6 +34,7 @@
 		8987B45D23D0C0C900E4FFC2 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = 8987B45C23D0C0C900E4FFC2 /* content.json */; };
 		8987B46123D0C15700E4FFC2 /* CTFrameParserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987B46023D0C15700E4FFC2 /* CTFrameParserConfig.m */; };
 		8987B46423D0C22600E4FFC2 /* CTFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987B46323D0C22600E4FFC2 /* CTFrameParser.m */; };
+		8987B46723D2026E00E4FFC2 /* CoreTextLinkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987B46623D2026E00E4FFC2 /* CoreTextLinkData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,8 @@
 		8987B46023D0C15700E4FFC2 /* CTFrameParserConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFrameParserConfig.m; sourceTree = "<group>"; };
 		8987B46223D0C22600E4FFC2 /* CTFrameParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTFrameParser.h; sourceTree = "<group>"; };
 		8987B46323D0C22600E4FFC2 /* CTFrameParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFrameParser.m; sourceTree = "<group>"; };
+		8987B46523D2026E00E4FFC2 /* CoreTextLinkData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextLinkData.h; sourceTree = "<group>"; };
+		8987B46623D2026E00E4FFC2 /* CoreTextLinkData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextLinkData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +236,8 @@
 				8987B44F23D0B84000E4FFC2 /* CoreTextData.m */,
 				8987B45123D0BAE600E4FFC2 /* CoreTextImageData.h */,
 				8987B45223D0BAE600E4FFC2 /* CoreTextImageData.m */,
+				8987B46523D2026E00E4FFC2 /* CoreTextLinkData.h */,
+				8987B46623D2026E00E4FFC2 /* CoreTextLinkData.m */,
 				8987B45F23D0C15700E4FFC2 /* CTFrameParserConfig.h */,
 				8987B46023D0C15700E4FFC2 /* CTFrameParserConfig.m */,
 				8987B46223D0C22600E4FFC2 /* CTFrameParser.h */,
@@ -400,6 +405,7 @@
 				4FC4836523CF2677007E8990 /* CTLineView.m in Sources */,
 				8987B46423D0C22600E4FFC2 /* CTFrameParser.m in Sources */,
 				4FC4832A23CF2617007E8990 /* AppDelegate.m in Sources */,
+				8987B46723D2026E00E4FFC2 /* CoreTextLinkData.m in Sources */,
 				4FD71CA023D1945100057372 /* UIView+frameAdjust.m in Sources */,
 				8987B45023D0B84000E4FFC2 /* CoreTextData.m in Sources */,
 				4FD71C9923D1654000057372 /* CoreTextUtil.m in Sources */,
