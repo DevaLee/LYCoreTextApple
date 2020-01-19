@@ -22,6 +22,9 @@
 		4FD71C9923D1654000057372 /* CoreTextUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71C9823D1654000057372 /* CoreTextUtil.m */; };
 		4FD71C9D23D16D4600057372 /* CTDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71C9C23D16D4600057372 /* CTDisplayView.m */; };
 		4FD71CA023D1945100057372 /* UIView+frameAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71C9E23D1945000057372 /* UIView+frameAdjust.m */; };
+		4FD71CA423D403C200057372 /* CTCustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CA323D403C200057372 /* CTCustomLayer.m */; };
+		4FD71CA723D4055600057372 /* CTCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CA623D4055600057372 /* CTCustomView.m */; };
+		4FD71CB023D43FF100057372 /* WMGFontMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CAF23D43FF100057372 /* WMGFontMetrics.m */; };
 		5101A0A423CF5CFA007B07D2 /* CTMultiColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */; };
 		5101A0A723CF5F50007B07D2 /* CTLineBreaking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A623CF5F50007B07D2 /* CTLineBreaking.m */; };
 		5101A0AA23CF6BF8007B07D2 /* CTParagraphStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A923CF6BF8007B07D2 /* CTParagraphStyleView.m */; };
@@ -84,6 +87,13 @@
 		4FD71C9C23D16D4600057372 /* CTDisplayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTDisplayView.m; sourceTree = "<group>"; };
 		4FD71C9E23D1945000057372 /* UIView+frameAdjust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+frameAdjust.m"; path = "../../../../iOS-Pro/DemoProjects/CoreText/CoreTextDemo/Views/UIView+frameAdjust.m"; sourceTree = "<group>"; };
 		4FD71C9F23D1945000057372 /* UIView+frameAdjust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+frameAdjust.h"; path = "../../../../iOS-Pro/DemoProjects/CoreText/CoreTextDemo/Views/UIView+frameAdjust.h"; sourceTree = "<group>"; };
+		4FD71CA223D403C200057372 /* CTCustomLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTCustomLayer.h; sourceTree = "<group>"; };
+		4FD71CA323D403C200057372 /* CTCustomLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTCustomLayer.m; sourceTree = "<group>"; };
+		4FD71CA523D4055600057372 /* CTCustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTCustomView.h; sourceTree = "<group>"; };
+		4FD71CA623D4055600057372 /* CTCustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTCustomView.m; sourceTree = "<group>"; };
+		4FD71CAD23D43F8E00057372 /* WMGAttachment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMGAttachment.h; sourceTree = "<group>"; };
+		4FD71CAE23D43FF100057372 /* WMGFontMetrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMGFontMetrics.h; sourceTree = "<group>"; };
+		4FD71CAF23D43FF100057372 /* WMGFontMetrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMGFontMetrics.m; sourceTree = "<group>"; };
 		5101A0A223CF5CFA007B07D2 /* CTMultiColumnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMultiColumnView.h; sourceTree = "<group>"; };
 		5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMultiColumnView.m; sourceTree = "<group>"; };
 		5101A0A523CF5F50007B07D2 /* CTLineBreaking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLineBreaking.h; sourceTree = "<group>"; };
@@ -155,7 +165,9 @@
 		4FC4832723CF2617007E8990 /* LYCoreTextApple */ = {
 			isa = PBXGroup;
 			children = (
+				4FD71CA823D43F1200057372 /* Graver */,
 				8987B45E23D0C0E200E4FFC2 /* Resource */,
+				4FD71CA123D4038A00057372 /* LayerTranslate */,
 				8987B44C23D0B81100E4FFC2 /* CoreYuan */,
 				4FC4835D23CF2676007E8990 /* CoreText */,
 				4FC4832823CF2617007E8990 /* AppDelegate.h */,
@@ -216,6 +228,60 @@
 				4FD71C9C23D16D4600057372 /* CTDisplayView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4FD71CA123D4038A00057372 /* LayerTranslate */ = {
+			isa = PBXGroup;
+			children = (
+				4FD71CA223D403C200057372 /* CTCustomLayer.h */,
+				4FD71CA323D403C200057372 /* CTCustomLayer.m */,
+				4FD71CA523D4055600057372 /* CTCustomView.h */,
+				4FD71CA623D4055600057372 /* CTCustomView.m */,
+			);
+			name = LayerTranslate;
+			path = LYCoreTextApple/LayerTranslate;
+			sourceTree = SOURCE_ROOT;
+		};
+		4FD71CA823D43F1200057372 /* Graver */ = {
+			isa = PBXGroup;
+			children = (
+				4FD71CA923D43F4900057372 /* CoreText */,
+			);
+			path = Graver;
+			sourceTree = "<group>";
+		};
+		4FD71CA923D43F4900057372 /* CoreText */ = {
+			isa = PBXGroup;
+			children = (
+				4FD71CAC23D43F7000057372 /* Asscessory */,
+				4FD71CAA23D43F7000057372 /* Drawer */,
+				4FD71CAB23D43F7000057372 /* Layout */,
+			);
+			path = CoreText;
+			sourceTree = "<group>";
+		};
+		4FD71CAA23D43F7000057372 /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Drawer;
+			sourceTree = "<group>";
+		};
+		4FD71CAB23D43F7000057372 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		4FD71CAC23D43F7000057372 /* Asscessory */ = {
+			isa = PBXGroup;
+			children = (
+				4FD71CAD23D43F8E00057372 /* WMGAttachment.h */,
+				4FD71CAE23D43FF100057372 /* WMGFontMetrics.h */,
+				4FD71CAF23D43FF100057372 /* WMGFontMetrics.m */,
+			);
+			path = Asscessory;
 			sourceTree = "<group>";
 		};
 		8987B44C23D0B81100E4FFC2 /* CoreYuan */ = {
@@ -396,13 +462,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD71CB023D43FF100057372 /* WMGFontMetrics.m in Sources */,
 				4FC4833023CF2617007E8990 /* ViewController.m in Sources */,
 				4FD71C9D23D16D4600057372 /* CTDisplayView.m in Sources */,
 				8987B45323D0BAE600E4FFC2 /* CoreTextImageData.m in Sources */,
 				5101A0A723CF5F50007B07D2 /* CTLineBreaking.m in Sources */,
+				4FD71CA723D4055600057372 /* CTCustomView.m in Sources */,
 				4FC4836823CFFF79007E8990 /* CTNonrectangularView.m in Sources */,
 				5101A0AA23CF6BF8007B07D2 /* CTParagraphStyleView.m in Sources */,
 				4FC4836523CF2677007E8990 /* CTLineView.m in Sources */,
+				4FD71CA423D403C200057372 /* CTCustomLayer.m in Sources */,
 				8987B46423D0C22600E4FFC2 /* CTFrameParser.m in Sources */,
 				4FC4832A23CF2617007E8990 /* AppDelegate.m in Sources */,
 				8987B46723D2026E00E4FFC2 /* CoreTextLinkData.m in Sources */,
