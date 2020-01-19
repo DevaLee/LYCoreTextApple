@@ -7,8 +7,23 @@
 //
 
 #import "CoreTextUtil.h"
+#import "CoreTextLinkData.h"
 
 @implementation CoreTextUtil
+
+
++(CoreTextLinkData *)touchLinkInView:(UIView *)view atPoint:(CGPoint)point data:(CoreTextData *)data {
+    CFIndex idx = [self touchContentOffsetInView:view atPoint:point data:data];
+    if (idx == -1) {
+        return nil;
+    }
+    
+    CoreTextLinkData *foundLink = [self linkAtIndex:idx linkArray:data.linkArray];
+    return foundLink;
+}
+
+
+// 将点击的位置转换成字符串的偏移量，如果没有找到，则返回-1
 +(CFIndex)touchContentOffsetInView:(UIView *)view atPoint:(CGPoint)point data:(CoreTextData *)data {
     CTFrameRef frameRef = data.ctFrame;
     CFArrayRef lines = CTFrameGetLines(frameRef);
@@ -54,6 +69,19 @@
     CGFloat height = ascent + descent;
     
     return CGRectMake(point.x, point.y - descent, width, height);
+}
+
+
++ (CoreTextLinkData *)linkAtIndex:(CFIndex)i linkArray:(NSArray *)linkArray {
+    CoreTextLinkData *link = nil;
+    
+    for (CoreTextLinkData *data in linkArray) {
+        if (NSLocationInRange(i, data.range)) {
+            link = data;
+            break;
+        }
+    }
+    return link;
 }
 
 @end

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "CoreTextData.h"
+#import "CoreTextLinkData.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CoreTextUtil : NSObject
@@ -16,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (CFIndex)touchContentOffsetInView:(UIView *)view
                             atPoint:(CGPoint)point
                                data:(CoreTextData *)data;
+
++ (CoreTextLinkData *)touchLinkInView:(UIView *)view atPoint:(CGPoint)point data:(CoreTextData *)data;
 @end
 
 NS_ASSUME_NONNULL_END

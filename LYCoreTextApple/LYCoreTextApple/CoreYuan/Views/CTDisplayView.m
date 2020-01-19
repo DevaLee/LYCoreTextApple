@@ -8,6 +8,10 @@
 
 #import "CTDisplayView.h"
 #import "CoreTextImageData.h"
+#import "CoreTextUtil.h"
+
+NSString *const CTDisplayViewImagePressedNotification = @"CTDisplayViewImagePressedNotification";
+NSString *const CTDisplayViewLinkPressedNotification = @"CTDisplayViewLinkPressedNotification";
 
 typedef enum CTDisplayViewState: NSInteger {
     CTDisplayViewStateNormal,
@@ -74,6 +78,25 @@ typedef enum CTDisplayViewState: NSInteger {
             // 翻转坐标系，因为imageData中的坐标是CoreText的坐标系
             CGRect imageRect = imageData.imagePosition;
             CGPoint imagePosition = imageRect.origin;
+            imagePosition.y = self.bounds.size.height - imageRect.origin.y - imageRect.size.height;
+            CGRect rect = CGRectMake(imagePosition.x, imagePosition.y, imageRect.size.width, imageRect.size.height);
+            // 检测点击位置 Point 是否在rect之内
+            if (CGRectContainsPoint(rect, point)) {
+                NSLog(@"hit image");
+                
+                NSDictionary *userInfo = @{@"imageData": imageData};
+                [[NSNotificationCenter defaultCenter] postNotificationName:CTDisplayViewImagePressedNotification object:self userInfo:userInfo];
+                return;
+            }
+        }
+        
+        CoreTextLinkData *linkData = [CoreTextUtil touchLinkInView:self atPoint:point data:self.data];
+        if (linkData) {
+            NSLog(@"hint Link");
+            NSDictionary *userInfo = @{@"linkData": linkData};
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:CTDisplayViewLinkPressedNotification object:self userInfo:userInfo];
+            return;
         }
     }
 }
