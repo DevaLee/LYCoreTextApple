@@ -118,6 +118,7 @@ typedef enum CTDisplayViewState: NSInteger {
         return;
     }
     
+    
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     CGContextSetTextMatrix(context, CGAffineTransformIdentity);
@@ -134,6 +135,12 @@ typedef enum CTDisplayViewState: NSInteger {
         if (image) {
             CGContextDrawImage(context, imageData.imagePosition, image.CGImage);
         }
+    }
+    
+     CGImageRef CGImage = context ? CGBitmapContextCreateImage(context) : NULL;
+    
+    if (CGImage) {
+        self.layer.contents = CFBridgingRelease(CGImage);
     }
     
 }

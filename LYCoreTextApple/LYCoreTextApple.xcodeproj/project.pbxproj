@@ -29,6 +29,10 @@
 		4FD71CB623D4515000057372 /* WMGTextLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CB523D4515000057372 /* WMGTextLayout.m */; };
 		4FD71CB923D4589400057372 /* WMGTextLayoutFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CB823D4589400057372 /* WMGTextLayoutFrame.m */; };
 		4FD71CBC23D458D600057372 /* WMGTextLayoutLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CBB23D458D600057372 /* WMGTextLayoutLine.m */; };
+		4FD71CBF23D5527300057372 /* WMGTextDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CBE23D5527300057372 /* WMGTextDrawer.m */; };
+		4FD71CC223D552B600057372 /* WMGTextDrawer+Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CC123D552B600057372 /* WMGTextDrawer+Coordinate.m */; };
+		4FD71CC523D5535200057372 /* WMGTextLayout+Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CC423D5535200057372 /* WMGTextLayout+Coordinate.m */; };
+		4FD71CC923D5564600057372 /* NSMutableAttributedString+GTextProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CC823D5564600057372 /* NSMutableAttributedString+GTextProperty.m */; };
 		5101A0A423CF5CFA007B07D2 /* CTMultiColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */; };
 		5101A0A723CF5F50007B07D2 /* CTLineBreaking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A623CF5F50007B07D2 /* CTLineBreaking.m */; };
 		5101A0AA23CF6BF8007B07D2 /* CTParagraphStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A923CF6BF8007B07D2 /* CTParagraphStyleView.m */; };
@@ -106,6 +110,14 @@
 		4FD71CB823D4589400057372 /* WMGTextLayoutFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMGTextLayoutFrame.m; sourceTree = "<group>"; };
 		4FD71CBA23D458D600057372 /* WMGTextLayoutLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMGTextLayoutLine.h; sourceTree = "<group>"; };
 		4FD71CBB23D458D600057372 /* WMGTextLayoutLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMGTextLayoutLine.m; sourceTree = "<group>"; };
+		4FD71CBD23D5527300057372 /* WMGTextDrawer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMGTextDrawer.h; sourceTree = "<group>"; };
+		4FD71CBE23D5527300057372 /* WMGTextDrawer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMGTextDrawer.m; sourceTree = "<group>"; };
+		4FD71CC023D552B600057372 /* WMGTextDrawer+Coordinate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WMGTextDrawer+Coordinate.h"; sourceTree = "<group>"; };
+		4FD71CC123D552B600057372 /* WMGTextDrawer+Coordinate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WMGTextDrawer+Coordinate.m"; sourceTree = "<group>"; };
+		4FD71CC323D5535200057372 /* WMGTextLayout+Coordinate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WMGTextLayout+Coordinate.h"; sourceTree = "<group>"; };
+		4FD71CC423D5535200057372 /* WMGTextLayout+Coordinate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WMGTextLayout+Coordinate.m"; sourceTree = "<group>"; };
+		4FD71CC723D5564600057372 /* NSMutableAttributedString+GTextProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+GTextProperty.h"; sourceTree = "<group>"; };
+		4FD71CC823D5564600057372 /* NSMutableAttributedString+GTextProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+GTextProperty.m"; sourceTree = "<group>"; };
 		5101A0A223CF5CFA007B07D2 /* CTMultiColumnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMultiColumnView.h; sourceTree = "<group>"; };
 		5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMultiColumnView.m; sourceTree = "<group>"; };
 		5101A0A523CF5F50007B07D2 /* CTLineBreaking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLineBreaking.h; sourceTree = "<group>"; };
@@ -257,6 +269,7 @@
 		4FD71CA823D43F1200057372 /* Graver */ = {
 			isa = PBXGroup;
 			children = (
+				4FD71CC623D5562500057372 /* AttributedItem */,
 				4FD71CA923D43F4900057372 /* CoreText */,
 			);
 			path = Graver;
@@ -275,6 +288,10 @@
 		4FD71CAA23D43F7000057372 /* Drawer */ = {
 			isa = PBXGroup;
 			children = (
+				4FD71CBD23D5527300057372 /* WMGTextDrawer.h */,
+				4FD71CBE23D5527300057372 /* WMGTextDrawer.m */,
+				4FD71CC023D552B600057372 /* WMGTextDrawer+Coordinate.h */,
+				4FD71CC123D552B600057372 /* WMGTextDrawer+Coordinate.m */,
 			);
 			path = Drawer;
 			sourceTree = "<group>";
@@ -284,6 +301,8 @@
 			children = (
 				4FD71CB423D4515000057372 /* WMGTextLayout.h */,
 				4FD71CB523D4515000057372 /* WMGTextLayout.m */,
+				4FD71CC323D5535200057372 /* WMGTextLayout+Coordinate.h */,
+				4FD71CC423D5535200057372 /* WMGTextLayout+Coordinate.m */,
 				4FD71CB723D4589400057372 /* WMGTextLayoutFrame.h */,
 				4FD71CB823D4589400057372 /* WMGTextLayoutFrame.m */,
 				4FD71CBA23D458D600057372 /* WMGTextLayoutLine.h */,
@@ -302,6 +321,15 @@
 				4FD71CAF23D43FF100057372 /* WMGFontMetrics.m */,
 			);
 			path = Asscessory;
+			sourceTree = "<group>";
+		};
+		4FD71CC623D5562500057372 /* AttributedItem */ = {
+			isa = PBXGroup;
+			children = (
+				4FD71CC723D5564600057372 /* NSMutableAttributedString+GTextProperty.h */,
+				4FD71CC823D5564600057372 /* NSMutableAttributedString+GTextProperty.m */,
+			);
+			path = AttributedItem;
 			sourceTree = "<group>";
 		};
 		8987B44C23D0B81100E4FFC2 /* CoreYuan */ = {
@@ -492,15 +520,19 @@
 				5101A0AA23CF6BF8007B07D2 /* CTParagraphStyleView.m in Sources */,
 				4FC4836523CF2677007E8990 /* CTLineView.m in Sources */,
 				4FD71CB323D44ED200057372 /* WMGTextLayoutRun.m in Sources */,
+				4FD71CC923D5564600057372 /* NSMutableAttributedString+GTextProperty.m in Sources */,
 				4FD71CA423D403C200057372 /* CTCustomLayer.m in Sources */,
 				8987B46423D0C22600E4FFC2 /* CTFrameParser.m in Sources */,
 				4FD71CB623D4515000057372 /* WMGTextLayout.m in Sources */,
 				4FC4832A23CF2617007E8990 /* AppDelegate.m in Sources */,
 				8987B46723D2026E00E4FFC2 /* CoreTextLinkData.m in Sources */,
+				4FD71CC523D5535200057372 /* WMGTextLayout+Coordinate.m in Sources */,
 				4FD71CA023D1945100057372 /* UIView+frameAdjust.m in Sources */,
 				8987B45023D0B84000E4FFC2 /* CoreTextData.m in Sources */,
+				4FD71CC223D552B600057372 /* WMGTextDrawer+Coordinate.m in Sources */,
 				4FD71C9923D1654000057372 /* CoreTextUtil.m in Sources */,
 				4FC4833B23CF2618007E8990 /* main.m in Sources */,
+				4FD71CBF23D5527300057372 /* WMGTextDrawer.m in Sources */,
 				4FD71CB923D4589400057372 /* WMGTextLayoutFrame.m in Sources */,
 				4FD71CBC23D458D600057372 /* WMGTextLayoutLine.m in Sources */,
 				8987B46123D0C15700E4FFC2 /* CTFrameParserConfig.m in Sources */,
