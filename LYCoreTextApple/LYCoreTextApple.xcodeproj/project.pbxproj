@@ -33,6 +33,9 @@
 		4FD71CC223D552B600057372 /* WMGTextDrawer+Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CC123D552B600057372 /* WMGTextDrawer+Coordinate.m */; };
 		4FD71CC523D5535200057372 /* WMGTextLayout+Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CC423D5535200057372 /* WMGTextLayout+Coordinate.m */; };
 		4FD71CC923D5564600057372 /* NSMutableAttributedString+GTextProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CC823D5564600057372 /* NSMutableAttributedString+GTextProperty.m */; };
+		4FD71CD723D5B90B00057372 /* 2230188-57a0767a279bb319.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD71CD423D5B90B00057372 /* 2230188-57a0767a279bb319.png */; };
+		4FD71CD823D5B90B00057372 /* 2230188-cfa554eb5d7a90c6.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD71CD523D5B90B00057372 /* 2230188-cfa554eb5d7a90c6.png */; };
+		4FD71CD923D5B90B00057372 /* 2230188-ad3809a3652a90a9.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD71CD623D5B90B00057372 /* 2230188-ad3809a3652a90a9.png */; };
 		5101A0A423CF5CFA007B07D2 /* CTMultiColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */; };
 		5101A0A723CF5F50007B07D2 /* CTLineBreaking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A623CF5F50007B07D2 /* CTLineBreaking.m */; };
 		5101A0AA23CF6BF8007B07D2 /* CTParagraphStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A923CF6BF8007B07D2 /* CTParagraphStyleView.m */; };
@@ -118,6 +121,9 @@
 		4FD71CC423D5535200057372 /* WMGTextLayout+Coordinate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WMGTextLayout+Coordinate.m"; sourceTree = "<group>"; };
 		4FD71CC723D5564600057372 /* NSMutableAttributedString+GTextProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+GTextProperty.h"; sourceTree = "<group>"; };
 		4FD71CC823D5564600057372 /* NSMutableAttributedString+GTextProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+GTextProperty.m"; sourceTree = "<group>"; };
+		4FD71CD423D5B90B00057372 /* 2230188-57a0767a279bb319.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2230188-57a0767a279bb319.png"; sourceTree = "<group>"; };
+		4FD71CD523D5B90B00057372 /* 2230188-cfa554eb5d7a90c6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2230188-cfa554eb5d7a90c6.png"; sourceTree = "<group>"; };
+		4FD71CD623D5B90B00057372 /* 2230188-ad3809a3652a90a9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2230188-ad3809a3652a90a9.png"; sourceTree = "<group>"; };
 		5101A0A223CF5CFA007B07D2 /* CTMultiColumnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMultiColumnView.h; sourceTree = "<group>"; };
 		5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMultiColumnView.m; sourceTree = "<group>"; };
 		5101A0A523CF5F50007B07D2 /* CTLineBreaking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLineBreaking.h; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 		4FC4832723CF2617007E8990 /* LYCoreTextApple */ = {
 			isa = PBXGroup;
 			children = (
+				4FD71CD323D5B90B00057372 /* 架构图 */,
 				4FD71CA823D43F1200057372 /* Graver */,
 				8987B45E23D0C0E200E4FFC2 /* Resource */,
 				4FD71CA123D4038A00057372 /* LayerTranslate */,
@@ -240,7 +247,6 @@
 				5101A0A923CF6BF8007B07D2 /* CTParagraphStyleView.m */,
 				4FC4836623CFFF79007E8990 /* CTNonrectangularView.h */,
 				4FC4836723CFFF79007E8990 /* CTNonrectangularView.m */,
-				4FC4836023CF2676007E8990 /* core_text_arch_2x.png */,
 			);
 			path = CoreText;
 			sourceTree = "<group>";
@@ -330,6 +336,17 @@
 				4FD71CC823D5564600057372 /* NSMutableAttributedString+GTextProperty.m */,
 			);
 			path = AttributedItem;
+			sourceTree = "<group>";
+		};
+		4FD71CD323D5B90B00057372 /* 架构图 */ = {
+			isa = PBXGroup;
+			children = (
+				4FC4836023CF2676007E8990 /* core_text_arch_2x.png */,
+				4FD71CD423D5B90B00057372 /* 2230188-57a0767a279bb319.png */,
+				4FD71CD523D5B90B00057372 /* 2230188-cfa554eb5d7a90c6.png */,
+				4FD71CD623D5B90B00057372 /* 2230188-ad3809a3652a90a9.png */,
+			);
+			path = "架构图";
 			sourceTree = "<group>";
 		};
 		8987B44C23D0B81100E4FFC2 /* CoreYuan */ = {
@@ -483,9 +500,12 @@
 				8987B45A23D0C0AF00E4FFC2 /* coretext-image-2.jpg in Resources */,
 				4FC4833523CF2618007E8990 /* Assets.xcassets in Resources */,
 				4FC4833323CF2617007E8990 /* Main.storyboard in Resources */,
+				4FD71CD923D5B90B00057372 /* 2230188-ad3809a3652a90a9.png in Resources */,
 				8987B45823D0C0AF00E4FFC2 /* cursor@2x.png in Resources */,
 				4FC4836423CF2677007E8990 /* core_text_arch_2x.png in Resources */,
 				8987B45D23D0C0C900E4FFC2 /* content.json in Resources */,
+				4FD71CD723D5B90B00057372 /* 2230188-57a0767a279bb319.png in Resources */,
+				4FD71CD823D5B90B00057372 /* 2230188-cfa554eb5d7a90c6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

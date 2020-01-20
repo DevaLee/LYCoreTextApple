@@ -85,23 +85,6 @@ static NSString *WMGEllipsisCharacter = @"\u2026";
     
 }
 
-#pragma mark - NSCopying & NSMutableCopying
-
-- (id)copyWithZone:(NSZone *)zone
-{
-    WMGTextLayoutFrame *copy = [[[self class] allocWithZone:zone] init];
-    copy.textLayout = self.textLayout;
-    copy.arrayLines = [self.arrayLines copy];
-    copy.layoutSize = CGSizeMake(_layoutSize.width, _layoutSize.height);
-    return copy;
-}
-
-- (id)mutableCopyWithZone:(NSZone *)zone
-{
-    WMGTextLayoutFrame *copy = [WMGTextLayoutFrame allocWithZone:zone];
-    return copy;
-}
-
 #pragma mark - Line Truncating
 // 处理截断文字-> 返回新的带有截断文字的CTLineRef 对象
 -(id)_textLayout:(WMGTextLayout *)textLayout truncateLine:(CTLineRef)lineRef atIndex:(NSUInteger)index truncated:(BOOL *)truncated {
@@ -220,6 +203,24 @@ static NSString *WMGEllipsisCharacter = @"\u2026";
         return floor(width);
     }
     return textLayout.size.width;
+}
+
+
+#pragma mark - NSCopying & NSMutableCopying
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    WMGTextLayoutFrame *copy = [[[self class] allocWithZone:zone] init];
+    copy.textLayout = self.textLayout;
+    copy.arrayLines = [self.arrayLines copy];
+    copy.layoutSize = CGSizeMake(_layoutSize.width, _layoutSize.height);
+    return copy;
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone
+{
+    WMGTextLayoutFrame *copy = [WMGTextLayoutFrame allocWithZone:zone];
+    return copy;
 }
 
 @end
