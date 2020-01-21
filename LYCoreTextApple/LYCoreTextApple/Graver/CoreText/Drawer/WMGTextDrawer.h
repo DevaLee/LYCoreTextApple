@@ -16,7 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @class WMGTextAttachment;
 @protocol WMGAttachment;
 @protocol WMGActiveRange;
-
+@protocol WMGTextDrawerDelegate;
+@protocol WMGTextDrawerEventDelegate;
 
 
 typedef BOOL (^WMGTextDrawerShouldInterruptBlock)(void);
@@ -24,6 +25,27 @@ typedef BOOL (^WMGTextDrawerShouldInterruptBlock)(void);
 @interface WMGTextDrawer : UIResponder
 
 @property (nonatomic,assign) CGRect frame;
+
+// CoreText排版模型封装
+@property (nonatomic, strong, readonly) WMGTextLayout *textLayout;
+
+// 文本绘制器的代理
+@property (nonatomic, weak) id <WMGTextDrawerDelegate> delegate;
+
+// 文本绘制器的事件代理，用以处理混排图文中的可点击响应
+@property (nonatomic, weak) id <WMGTextDrawerEventDelegate> eventDelegate;
+
+/**
+ *  文本绘制器的基本绘制方法，绘制到当前上下文中
+ */
+- (void)draw;
+
+/**
+ *  将文本绘制器裹挟的内容绘制到指定上下文中
+ *
+ *  @param ctx      当前的 CGContext
+ */
+- (void)drawInContext:(CGContextRef)ctx;
 
 @end
 
