@@ -45,6 +45,7 @@
 		4FD71CFD23D6DB1500057372 /* UIFont+Graver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CF723D6DB1400057372 /* UIFont+Graver.m */; };
 		4FD71CFE23D6DB1500057372 /* UIDevice+Graver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CF923D6DB1400057372 /* UIDevice+Graver.m */; };
 		4FD71D0223D6FE0100057372 /* WMGContextAssisant.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71D0123D6FE0100057372 /* WMGContextAssisant.m */; };
+		4FD71D0E23D7096B00057372 /* WMGTextActiveRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71D0D23D7096B00057372 /* WMGTextActiveRange.m */; };
 		5101A0A423CF5CFA007B07D2 /* CTMultiColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */; };
 		5101A0A723CF5F50007B07D2 /* CTLineBreaking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A623CF5F50007B07D2 /* CTLineBreaking.m */; };
 		5101A0AA23CF6BF8007B07D2 /* CTParagraphStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A923CF6BF8007B07D2 /* CTParagraphStyleView.m */; };
@@ -157,6 +158,11 @@
 		4FD71CFF23D6DCAB00057372 /* WMGraverMacroDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMGraverMacroDefine.h; sourceTree = "<group>"; };
 		4FD71D0023D6FE0100057372 /* WMGContextAssisant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMGContextAssisant.h; sourceTree = "<group>"; };
 		4FD71D0123D6FE0100057372 /* WMGContextAssisant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMGContextAssisant.m; sourceTree = "<group>"; };
+		4FD71D0323D7044400057372 /* WMGTextDrawer+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WMGTextDrawer+Private.h"; sourceTree = "<group>"; };
+		4FD71D0623D704BB00057372 /* WMGTextDrawer+Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WMGTextDrawer+Event.h"; sourceTree = "<group>"; };
+		4FD71D0B23D7090100057372 /* WMGActiveRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMGActiveRange.h; sourceTree = "<group>"; };
+		4FD71D0C23D7096B00057372 /* WMGTextActiveRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMGTextActiveRange.h; sourceTree = "<group>"; };
+		4FD71D0D23D7096B00057372 /* WMGTextActiveRange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMGTextActiveRange.m; sourceTree = "<group>"; };
 		5101A0A223CF5CFA007B07D2 /* CTMultiColumnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMultiColumnView.h; sourceTree = "<group>"; };
 		5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMultiColumnView.m; sourceTree = "<group>"; };
 		5101A0A523CF5F50007B07D2 /* CTLineBreaking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLineBreaking.h; sourceTree = "<group>"; };
@@ -318,6 +324,7 @@
 		4FD71CA823D43F1200057372 /* Graver */ = {
 			isa = PBXGroup;
 			children = (
+				4FD71D0923D7064D00057372 /* AsyncDraw */,
 				4FD71CE623D6DB0500057372 /* Utils */,
 				4FD71CC623D5562500057372 /* AttributedItem */,
 				4FD71CA923D43F4900057372 /* CoreText */,
@@ -343,6 +350,8 @@
 				4FD71CBE23D5527300057372 /* WMGTextDrawer.m */,
 				4FD71CC023D552B600057372 /* WMGTextDrawer+Coordinate.h */,
 				4FD71CC123D552B600057372 /* WMGTextDrawer+Coordinate.m */,
+				4FD71D0323D7044400057372 /* WMGTextDrawer+Private.h */,
+				4FD71D0623D704BB00057372 /* WMGTextDrawer+Event.h */,
 			);
 			path = Drawer;
 			sourceTree = "<group>";
@@ -416,6 +425,24 @@
 				4FD71CF723D6DB1400057372 /* UIFont+Graver.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		4FD71D0923D7064D00057372 /* AsyncDraw */ = {
+			isa = PBXGroup;
+			children = (
+				4FD71D0A23D707BC00057372 /* Accessory */,
+			);
+			path = AsyncDraw;
+			sourceTree = "<group>";
+		};
+		4FD71D0A23D707BC00057372 /* Accessory */ = {
+			isa = PBXGroup;
+			children = (
+				4FD71D0B23D7090100057372 /* WMGActiveRange.h */,
+				4FD71D0C23D7096B00057372 /* WMGTextActiveRange.h */,
+				4FD71D0D23D7096B00057372 /* WMGTextActiveRange.m */,
+			);
+			path = Accessory;
 			sourceTree = "<group>";
 		};
 		8987B44C23D0B81100E4FFC2 /* CoreYuan */ = {
@@ -743,6 +770,7 @@
 				4FC4833B23CF2618007E8990 /* main.m in Sources */,
 				4FD71CFE23D6DB1500057372 /* UIDevice+Graver.m in Sources */,
 				4FD71CBF23D5527300057372 /* WMGTextDrawer.m in Sources */,
+				4FD71D0E23D7096B00057372 /* WMGTextActiveRange.m in Sources */,
 				4FD71CB923D4589400057372 /* WMGTextLayoutFrame.m in Sources */,
 				4FD71CBC23D458D600057372 /* WMGTextLayoutLine.m in Sources */,
 				8987B46123D0C15700E4FFC2 /* CTFrameParserConfig.m in Sources */,
