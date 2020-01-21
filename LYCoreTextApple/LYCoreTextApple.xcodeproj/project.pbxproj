@@ -44,6 +44,7 @@
 		4FD71CFC23D6DB1500057372 /* NSObject+Graver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CF623D6DB1400057372 /* NSObject+Graver.m */; };
 		4FD71CFD23D6DB1500057372 /* UIFont+Graver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CF723D6DB1400057372 /* UIFont+Graver.m */; };
 		4FD71CFE23D6DB1500057372 /* UIDevice+Graver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CF923D6DB1400057372 /* UIDevice+Graver.m */; };
+		4FD71D0223D6FE0100057372 /* WMGContextAssisant.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71D0123D6FE0100057372 /* WMGContextAssisant.m */; };
 		5101A0A423CF5CFA007B07D2 /* CTMultiColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */; };
 		5101A0A723CF5F50007B07D2 /* CTLineBreaking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A623CF5F50007B07D2 /* CTLineBreaking.m */; };
 		5101A0AA23CF6BF8007B07D2 /* CTParagraphStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A923CF6BF8007B07D2 /* CTParagraphStyleView.m */; };
@@ -154,6 +155,8 @@
 		4FD71CF923D6DB1400057372 /* UIDevice+Graver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Graver.m"; sourceTree = "<group>"; };
 		4FD71CFA23D6DB1500057372 /* UIDevice+Graver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Graver.h"; sourceTree = "<group>"; };
 		4FD71CFF23D6DCAB00057372 /* WMGraverMacroDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMGraverMacroDefine.h; sourceTree = "<group>"; };
+		4FD71D0023D6FE0100057372 /* WMGContextAssisant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMGContextAssisant.h; sourceTree = "<group>"; };
+		4FD71D0123D6FE0100057372 /* WMGContextAssisant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMGContextAssisant.m; sourceTree = "<group>"; };
 		5101A0A223CF5CFA007B07D2 /* CTMultiColumnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMultiColumnView.h; sourceTree = "<group>"; };
 		5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMultiColumnView.m; sourceTree = "<group>"; };
 		5101A0A523CF5F50007B07D2 /* CTLineBreaking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLineBreaking.h; sourceTree = "<group>"; };
@@ -365,13 +368,15 @@
 			isa = PBXGroup;
 			children = (
 				4FD71CAD23D43F8E00057372 /* WMGAttachment.h */,
+				4FD71D0023D6FE0100057372 /* WMGContextAssisant.h */,
+				4FD71D0123D6FE0100057372 /* WMGContextAssisant.m */,
 				4FD71CAE23D43FF100057372 /* WMGFontMetrics.h */,
 				4FD71CAF23D43FF100057372 /* WMGFontMetrics.m */,
+				4FD71CE023D6D5FA00057372 /* WMGImage.h */,
+				4FD71CE123D6D5FA00057372 /* WMGImage.m */,
 				4FD71CDA23D69C9700057372 /* WMGTextAttachment.h */,
 				4FD71CDB23D69C9700057372 /* WMGTextAttachment.m */,
 				4FD71CDD23D6A08C00057372 /* WMGTextAttachment+Event.h */,
-				4FD71CE023D6D5FA00057372 /* WMGImage.h */,
-				4FD71CE123D6D5FA00057372 /* WMGImage.m */,
 			);
 			path = Asscessory;
 			sourceTree = "<group>";
@@ -708,6 +713,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD71CB023D43FF100057372 /* WMGFontMetrics.m in Sources */,
+				4FD71D0223D6FE0100057372 /* WMGContextAssisant.m in Sources */,
 				4FC4833023CF2617007E8990 /* ViewController.m in Sources */,
 				4FD71C9D23D16D4600057372 /* CTDisplayView.m in Sources */,
 				4FD71CDC23D69C9700057372 /* WMGTextAttachment.m in Sources */,
