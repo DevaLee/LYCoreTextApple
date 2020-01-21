@@ -1,0 +1,6 @@
+framework module Pods_LYCoreTextAppleUITests {
+  umbrella header "Pods-LYCoreTextAppleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

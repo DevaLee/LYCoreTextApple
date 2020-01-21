@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "WMGAttachment.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WMGTextLayoutRun : NSObject
 
++ (CTRunDelegateRef)textLayoutRunWithAttachment:(id<WMGAttachMent>)att;
 @end
 
 NS_ASSUME_NONNULL_END

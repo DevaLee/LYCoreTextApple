@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AFE454613641BDA0101B928 /* Pods_LYCoreTextAppleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B88981341E16FCDC6FF4760 /* Pods_LYCoreTextAppleUITests.framework */; };
 		4FC4832A23CF2617007E8990 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4832923CF2617007E8990 /* AppDelegate.m */; };
 		4FC4833023CF2617007E8990 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4832F23CF2617007E8990 /* ViewController.m */; };
 		4FC4833323CF2617007E8990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4833123CF2617007E8990 /* Main.storyboard */; };
@@ -36,6 +37,13 @@
 		4FD71CD723D5B90B00057372 /* 2230188-57a0767a279bb319.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD71CD423D5B90B00057372 /* 2230188-57a0767a279bb319.png */; };
 		4FD71CD823D5B90B00057372 /* 2230188-cfa554eb5d7a90c6.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD71CD523D5B90B00057372 /* 2230188-cfa554eb5d7a90c6.png */; };
 		4FD71CD923D5B90B00057372 /* 2230188-ad3809a3652a90a9.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD71CD623D5B90B00057372 /* 2230188-ad3809a3652a90a9.png */; };
+		4FD71CDC23D69C9700057372 /* WMGTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CDB23D69C9700057372 /* WMGTextAttachment.m */; };
+		4FD71CE223D6D5FA00057372 /* WMGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CE123D6D5FA00057372 /* WMGImage.m */; };
+		4FD71CE523D6D63F00057372 /* UIImage+Graver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CE423D6D63F00057372 /* UIImage+Graver.m */; };
+		4FD71CFB23D6DB1500057372 /* UIBezierPath+Graver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CF523D6DB1400057372 /* UIBezierPath+Graver.m */; };
+		4FD71CFC23D6DB1500057372 /* NSObject+Graver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CF623D6DB1400057372 /* NSObject+Graver.m */; };
+		4FD71CFD23D6DB1500057372 /* UIFont+Graver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CF723D6DB1400057372 /* UIFont+Graver.m */; };
+		4FD71CFE23D6DB1500057372 /* UIDevice+Graver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD71CF923D6DB1400057372 /* UIDevice+Graver.m */; };
 		5101A0A423CF5CFA007B07D2 /* CTMultiColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */; };
 		5101A0A723CF5F50007B07D2 /* CTLineBreaking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A623CF5F50007B07D2 /* CTLineBreaking.m */; };
 		5101A0AA23CF6BF8007B07D2 /* CTParagraphStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5101A0A923CF6BF8007B07D2 /* CTParagraphStyleView.m */; };
@@ -49,6 +57,8 @@
 		8987B46123D0C15700E4FFC2 /* CTFrameParserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987B46023D0C15700E4FFC2 /* CTFrameParserConfig.m */; };
 		8987B46423D0C22600E4FFC2 /* CTFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987B46323D0C22600E4FFC2 /* CTFrameParser.m */; };
 		8987B46723D2026E00E4FFC2 /* CoreTextLinkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987B46623D2026E00E4FFC2 /* CoreTextLinkData.m */; };
+		E73372F9AC439A5A2224E98D /* Pods_LYCoreTextApple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34489EE955144F0C19573454 /* Pods_LYCoreTextApple.framework */; };
+		F9C8B7AC749BEAA80AFFA6A1 /* Pods_LYCoreTextAppleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF22EA73DFDBE0435039F97 /* Pods_LYCoreTextAppleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +79,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17CBF938310269BC9784D14D /* Pods-LYCoreTextApple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYCoreTextApple.release.xcconfig"; path = "Target Support Files/Pods-LYCoreTextApple/Pods-LYCoreTextApple.release.xcconfig"; sourceTree = "<group>"; };
+		1CF22EA73DFDBE0435039F97 /* Pods_LYCoreTextAppleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYCoreTextAppleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2056197610A8CF661FDAD325 /* Pods-LYCoreTextAppleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYCoreTextAppleUITests.debug.xcconfig"; path = "Target Support Files/Pods-LYCoreTextAppleUITests/Pods-LYCoreTextAppleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		34489EE955144F0C19573454 /* Pods_LYCoreTextApple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYCoreTextApple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC4832523CF2617007E8990 /* LYCoreTextApple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYCoreTextApple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC4832823CF2617007E8990 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FC4832923CF2617007E8990 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -124,12 +138,30 @@
 		4FD71CD423D5B90B00057372 /* 2230188-57a0767a279bb319.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2230188-57a0767a279bb319.png"; sourceTree = "<group>"; };
 		4FD71CD523D5B90B00057372 /* 2230188-cfa554eb5d7a90c6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2230188-cfa554eb5d7a90c6.png"; sourceTree = "<group>"; };
 		4FD71CD623D5B90B00057372 /* 2230188-ad3809a3652a90a9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2230188-ad3809a3652a90a9.png"; sourceTree = "<group>"; };
+		4FD71CDA23D69C9700057372 /* WMGTextAttachment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMGTextAttachment.h; sourceTree = "<group>"; };
+		4FD71CDB23D69C9700057372 /* WMGTextAttachment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMGTextAttachment.m; sourceTree = "<group>"; };
+		4FD71CDD23D6A08C00057372 /* WMGTextAttachment+Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WMGTextAttachment+Event.h"; sourceTree = "<group>"; };
+		4FD71CE023D6D5FA00057372 /* WMGImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMGImage.h; sourceTree = "<group>"; };
+		4FD71CE123D6D5FA00057372 /* WMGImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMGImage.m; sourceTree = "<group>"; };
+		4FD71CE323D6D63F00057372 /* UIImage+Graver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Graver.h"; sourceTree = "<group>"; };
+		4FD71CE423D6D63F00057372 /* UIImage+Graver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Graver.m"; sourceTree = "<group>"; };
+		4FD71CF323D6DB1400057372 /* UIBezierPath+Graver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Graver.h"; sourceTree = "<group>"; };
+		4FD71CF423D6DB1400057372 /* UIFont+Graver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Graver.h"; sourceTree = "<group>"; };
+		4FD71CF523D6DB1400057372 /* UIBezierPath+Graver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Graver.m"; sourceTree = "<group>"; };
+		4FD71CF623D6DB1400057372 /* NSObject+Graver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Graver.m"; sourceTree = "<group>"; };
+		4FD71CF723D6DB1400057372 /* UIFont+Graver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Graver.m"; sourceTree = "<group>"; };
+		4FD71CF823D6DB1400057372 /* NSObject+Graver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Graver.h"; sourceTree = "<group>"; };
+		4FD71CF923D6DB1400057372 /* UIDevice+Graver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Graver.m"; sourceTree = "<group>"; };
+		4FD71CFA23D6DB1500057372 /* UIDevice+Graver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Graver.h"; sourceTree = "<group>"; };
+		4FD71CFF23D6DCAB00057372 /* WMGraverMacroDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMGraverMacroDefine.h; sourceTree = "<group>"; };
 		5101A0A223CF5CFA007B07D2 /* CTMultiColumnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMultiColumnView.h; sourceTree = "<group>"; };
 		5101A0A323CF5CFA007B07D2 /* CTMultiColumnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMultiColumnView.m; sourceTree = "<group>"; };
 		5101A0A523CF5F50007B07D2 /* CTLineBreaking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLineBreaking.h; sourceTree = "<group>"; };
 		5101A0A623CF5F50007B07D2 /* CTLineBreaking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTLineBreaking.m; sourceTree = "<group>"; };
 		5101A0A823CF6BF8007B07D2 /* CTParagraphStyleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTParagraphStyleView.h; sourceTree = "<group>"; };
 		5101A0A923CF6BF8007B07D2 /* CTParagraphStyleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTParagraphStyleView.m; sourceTree = "<group>"; };
+		655481DF7D94ED2FF0BFD8D0 /* Pods-LYCoreTextAppleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYCoreTextAppleTests.debug.xcconfig"; path = "Target Support Files/Pods-LYCoreTextAppleTests/Pods-LYCoreTextAppleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		840044F3431B9A4F4F871457 /* Pods-LYCoreTextAppleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYCoreTextAppleTests.release.xcconfig"; path = "Target Support Files/Pods-LYCoreTextAppleTests/Pods-LYCoreTextAppleTests.release.xcconfig"; sourceTree = "<group>"; };
 		8987B44E23D0B84000E4FFC2 /* CoreTextData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextData.h; sourceTree = "<group>"; };
 		8987B44F23D0B84000E4FFC2 /* CoreTextData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextData.m; sourceTree = "<group>"; };
 		8987B45123D0BAE600E4FFC2 /* CoreTextImageData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextImageData.h; sourceTree = "<group>"; };
@@ -145,6 +177,9 @@
 		8987B46323D0C22600E4FFC2 /* CTFrameParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFrameParser.m; sourceTree = "<group>"; };
 		8987B46523D2026E00E4FFC2 /* CoreTextLinkData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextLinkData.h; sourceTree = "<group>"; };
 		8987B46623D2026E00E4FFC2 /* CoreTextLinkData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextLinkData.m; sourceTree = "<group>"; };
+		93338D41269463BE55EF5EBC /* Pods-LYCoreTextApple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYCoreTextApple.debug.xcconfig"; path = "Target Support Files/Pods-LYCoreTextApple/Pods-LYCoreTextApple.debug.xcconfig"; sourceTree = "<group>"; };
+		9B88981341E16FCDC6FF4760 /* Pods_LYCoreTextAppleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYCoreTextAppleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA561EB5E749AF06DC197DEA /* Pods-LYCoreTextAppleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYCoreTextAppleUITests.release.xcconfig"; path = "Target Support Files/Pods-LYCoreTextAppleUITests/Pods-LYCoreTextAppleUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E73372F9AC439A5A2224E98D /* Pods_LYCoreTextApple.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C8B7AC749BEAA80AFFA6A1 /* Pods_LYCoreTextAppleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AFE454613641BDA0101B928 /* Pods_LYCoreTextAppleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +217,8 @@
 				4FC4834323CF2618007E8990 /* LYCoreTextAppleTests */,
 				4FC4834E23CF2618007E8990 /* LYCoreTextAppleUITests */,
 				4FC4832623CF2617007E8990 /* Products */,
+				930F36AC903DA056F916BDF6 /* Pods */,
+				E20D5B114B709C51FB970500 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -275,8 +315,10 @@
 		4FD71CA823D43F1200057372 /* Graver */ = {
 			isa = PBXGroup;
 			children = (
+				4FD71CE623D6DB0500057372 /* Utils */,
 				4FD71CC623D5562500057372 /* AttributedItem */,
 				4FD71CA923D43F4900057372 /* CoreText */,
+				4FD71CFF23D6DCAB00057372 /* WMGraverMacroDefine.h */,
 			);
 			path = Graver;
 			sourceTree = "<group>";
@@ -325,6 +367,11 @@
 				4FD71CAD23D43F8E00057372 /* WMGAttachment.h */,
 				4FD71CAE23D43FF100057372 /* WMGFontMetrics.h */,
 				4FD71CAF23D43FF100057372 /* WMGFontMetrics.m */,
+				4FD71CDA23D69C9700057372 /* WMGTextAttachment.h */,
+				4FD71CDB23D69C9700057372 /* WMGTextAttachment.m */,
+				4FD71CDD23D6A08C00057372 /* WMGTextAttachment+Event.h */,
+				4FD71CE023D6D5FA00057372 /* WMGImage.h */,
+				4FD71CE123D6D5FA00057372 /* WMGImage.m */,
 			);
 			path = Asscessory;
 			sourceTree = "<group>";
@@ -334,6 +381,8 @@
 			children = (
 				4FD71CC723D5564600057372 /* NSMutableAttributedString+GTextProperty.h */,
 				4FD71CC823D5564600057372 /* NSMutableAttributedString+GTextProperty.m */,
+				4FD71CE323D6D63F00057372 /* UIImage+Graver.h */,
+				4FD71CE423D6D63F00057372 /* UIImage+Graver.m */,
 			);
 			path = AttributedItem;
 			sourceTree = "<group>";
@@ -347,6 +396,21 @@
 				4FD71CD623D5B90B00057372 /* 2230188-ad3809a3652a90a9.png */,
 			);
 			path = "架构图";
+			sourceTree = "<group>";
+		};
+		4FD71CE623D6DB0500057372 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4FD71CF823D6DB1400057372 /* NSObject+Graver.h */,
+				4FD71CF623D6DB1400057372 /* NSObject+Graver.m */,
+				4FD71CF323D6DB1400057372 /* UIBezierPath+Graver.h */,
+				4FD71CF523D6DB1400057372 /* UIBezierPath+Graver.m */,
+				4FD71CFA23D6DB1500057372 /* UIDevice+Graver.h */,
+				4FD71CF923D6DB1400057372 /* UIDevice+Graver.m */,
+				4FD71CF423D6DB1400057372 /* UIFont+Graver.h */,
+				4FD71CF723D6DB1400057372 /* UIFont+Graver.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		8987B44C23D0B81100E4FFC2 /* CoreYuan */ = {
@@ -391,6 +455,29 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		930F36AC903DA056F916BDF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93338D41269463BE55EF5EBC /* Pods-LYCoreTextApple.debug.xcconfig */,
+				17CBF938310269BC9784D14D /* Pods-LYCoreTextApple.release.xcconfig */,
+				655481DF7D94ED2FF0BFD8D0 /* Pods-LYCoreTextAppleTests.debug.xcconfig */,
+				840044F3431B9A4F4F871457 /* Pods-LYCoreTextAppleTests.release.xcconfig */,
+				2056197610A8CF661FDAD325 /* Pods-LYCoreTextAppleUITests.debug.xcconfig */,
+				BA561EB5E749AF06DC197DEA /* Pods-LYCoreTextAppleUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E20D5B114B709C51FB970500 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34489EE955144F0C19573454 /* Pods_LYCoreTextApple.framework */,
+				1CF22EA73DFDBE0435039F97 /* Pods_LYCoreTextAppleTests.framework */,
+				9B88981341E16FCDC6FF4760 /* Pods_LYCoreTextAppleUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,9 +485,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FC4835423CF2618007E8990 /* Build configuration list for PBXNativeTarget "LYCoreTextApple" */;
 			buildPhases = (
+				96758D287E095D12EE5C3DBA /* [CP] Check Pods Manifest.lock */,
 				4FC4832123CF2617007E8990 /* Sources */,
 				4FC4832223CF2617007E8990 /* Frameworks */,
 				4FC4832323CF2617007E8990 /* Resources */,
+				54E7F84A3A2522517F134AD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -415,6 +504,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FC4835723CF2618007E8990 /* Build configuration list for PBXNativeTarget "LYCoreTextAppleTests" */;
 			buildPhases = (
+				3808D9AD534BA7361078CC5A /* [CP] Check Pods Manifest.lock */,
 				4FC4833C23CF2618007E8990 /* Sources */,
 				4FC4833D23CF2618007E8990 /* Frameworks */,
 				4FC4833E23CF2618007E8990 /* Resources */,
@@ -433,6 +523,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FC4835A23CF2618007E8990 /* Build configuration list for PBXNativeTarget "LYCoreTextAppleUITests" */;
 			buildPhases = (
+				3DC9832F58483E002DE54516 /* [CP] Check Pods Manifest.lock */,
 				4FC4834723CF2618007E8990 /* Sources */,
 				4FC4834823CF2618007E8990 /* Frameworks */,
 				4FC4834923CF2618007E8990 /* Resources */,
@@ -525,6 +616,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3808D9AD534BA7361078CC5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LYCoreTextAppleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DC9832F58483E002DE54516 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LYCoreTextAppleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54E7F84A3A2522517F134AD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LYCoreTextApple/Pods-LYCoreTextApple-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LYCoreTextApple/Pods-LYCoreTextApple-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LYCoreTextApple/Pods-LYCoreTextApple-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96758D287E095D12EE5C3DBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LYCoreTextApple-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4FC4832123CF2617007E8990 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -533,6 +710,7 @@
 				4FD71CB023D43FF100057372 /* WMGFontMetrics.m in Sources */,
 				4FC4833023CF2617007E8990 /* ViewController.m in Sources */,
 				4FD71C9D23D16D4600057372 /* CTDisplayView.m in Sources */,
+				4FD71CDC23D69C9700057372 /* WMGTextAttachment.m in Sources */,
 				8987B45323D0BAE600E4FFC2 /* CoreTextImageData.m in Sources */,
 				5101A0A723CF5F50007B07D2 /* CTLineBreaking.m in Sources */,
 				4FD71CA723D4055600057372 /* CTCustomView.m in Sources */,
@@ -540,8 +718,13 @@
 				5101A0AA23CF6BF8007B07D2 /* CTParagraphStyleView.m in Sources */,
 				4FC4836523CF2677007E8990 /* CTLineView.m in Sources */,
 				4FD71CB323D44ED200057372 /* WMGTextLayoutRun.m in Sources */,
+				4FD71CE223D6D5FA00057372 /* WMGImage.m in Sources */,
+				4FD71CE523D6D63F00057372 /* UIImage+Graver.m in Sources */,
+				4FD71CFD23D6DB1500057372 /* UIFont+Graver.m in Sources */,
 				4FD71CC923D5564600057372 /* NSMutableAttributedString+GTextProperty.m in Sources */,
+				4FD71CFB23D6DB1500057372 /* UIBezierPath+Graver.m in Sources */,
 				4FD71CA423D403C200057372 /* CTCustomLayer.m in Sources */,
+				4FD71CFC23D6DB1500057372 /* NSObject+Graver.m in Sources */,
 				8987B46423D0C22600E4FFC2 /* CTFrameParser.m in Sources */,
 				4FD71CB623D4515000057372 /* WMGTextLayout.m in Sources */,
 				4FC4832A23CF2617007E8990 /* AppDelegate.m in Sources */,
@@ -552,6 +735,7 @@
 				4FD71CC223D552B600057372 /* WMGTextDrawer+Coordinate.m in Sources */,
 				4FD71C9923D1654000057372 /* CoreTextUtil.m in Sources */,
 				4FC4833B23CF2618007E8990 /* main.m in Sources */,
+				4FD71CFE23D6DB1500057372 /* UIDevice+Graver.m in Sources */,
 				4FD71CBF23D5527300057372 /* WMGTextDrawer.m in Sources */,
 				4FD71CB923D4589400057372 /* WMGTextLayoutFrame.m in Sources */,
 				4FD71CBC23D458D600057372 /* WMGTextLayoutLine.m in Sources */,
@@ -724,6 +908,7 @@
 		};
 		4FC4835523CF2618007E8990 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93338D41269463BE55EF5EBC /* Pods-LYCoreTextApple.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -741,6 +926,7 @@
 		};
 		4FC4835623CF2618007E8990 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17CBF938310269BC9784D14D /* Pods-LYCoreTextApple.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -758,6 +944,7 @@
 		};
 		4FC4835823CF2618007E8990 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 655481DF7D94ED2FF0BFD8D0 /* Pods-LYCoreTextAppleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -777,6 +964,7 @@
 		};
 		4FC4835923CF2618007E8990 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 840044F3431B9A4F4F871457 /* Pods-LYCoreTextAppleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -796,6 +984,7 @@
 		};
 		4FC4835B23CF2618007E8990 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2056197610A8CF661FDAD325 /* Pods-LYCoreTextAppleUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LYCoreTextAppleUITests/Info.plist;
@@ -813,6 +1002,7 @@
 		};
 		4FC4835C23CF2618007E8990 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA561EB5E749AF06DC197DEA /* Pods-LYCoreTextAppleUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LYCoreTextAppleUITests/Info.plist;

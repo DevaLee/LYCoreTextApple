@@ -16,6 +16,7 @@ extern CGFloat const WMGTextLayoutMaximumWidth;
 extern CGFloat const WMGTextLayoutMaximumHeight;
 
 @class WMGTextLayout;
+@class WMGTextLayoutFrame;
 
 @protocol WMGTextLayoutDelegate <NSObject>
 
@@ -53,6 +54,15 @@ extern CGFloat const WMGTextLayoutMaximumHeight;
 // 标记当前排版结果需要更新
 - (void)setNeedsLayout;
 
+@end
+
+
+
+@interface WMGTextLayout(LayoutResult)
+// 标记当前排版结果是否为最新
+@property (nonatomic,assign, readonly) BOOL layoutUpToDate;
+
+@property (nonatomic,strong, readonly) WMGTextLayoutFrame *layoutFrame;
 @end
 
 NS_ASSUME_NONNULL_END
