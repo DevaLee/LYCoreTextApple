@@ -5,7 +5,7 @@
 //  Created by 9tong on 2020/1/20.
 //  Copyright © 2020 LY. All rights reserved.
 //
-
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreText/CoreText.h>
 #import <CoreGraphics/CoreGraphics.h>
@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class WMGTextLayout;
 @class WMGTextAttachment;
-@protocol WMGAttachment;
+@protocol WMGAttachMent;
 @protocol WMGActiveRange;
 @protocol WMGTextDrawerDelegate;
 @protocol WMGTextDrawerEventDelegate;
@@ -62,7 +62,7 @@ typedef BOOL (^WMGTextDrawerShouldInterruptBlock)(void);
  *  @param frame        建议渲染到的 frame
  *  @param context      当前的 CGContext
  */
-- (void)textDrawer:(WMGTextDrawer *)textDrawer replaceAttachment:(id <WMGAttachment>)att frame:(CGRect)frame context:(CGContextRef)context;
+- (void)textDrawer:(WMGTextDrawer *)textDrawer replaceAttachment:(id <WMGAttachMent>)att frame:(CGRect)frame context:(CGContextRef)context;
 
 @end
 

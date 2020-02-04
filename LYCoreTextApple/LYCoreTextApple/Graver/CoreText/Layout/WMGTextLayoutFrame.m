@@ -205,6 +205,90 @@ static NSString *WMGEllipsisCharacter = @"\u2026";
     return textLayout.size.width;
 }
 
+#pragma mark - Results
+
+- (void)enumerateEnclosingRectsForCharacterRange:(NSRange)characterRange usingBlock:(void (^)(CGRect, NSRange, BOOL *))block
+{
+    if (!block) {
+        return;
+    }
+
+    const NSUInteger lineCount = [self.arrayLines count];
+    [self.arrayLines enumerateObjectsUsingBlock:^(WMGTextLayoutLine *line, NSUInteger idx, BOOL *stop) {
+
+        const NSRange lineRange = line.originStringRange;
+        const CGRect lineRect = line.lineRect;
+
+        const NSUInteger lineStartIndex = lineRange.location;
+        const NSUInteger lineEndIndex = NSMaxRange(lineRange);
+
+        NSUInteger characterStartIndex = characterRange.location;
+        NSUInteger characterEndIndex = NSMaxRange(characterRange);
+
+        // 如果请求的 range 在当前行之后，直接结束
+        if (characterStartIndex >= lineEndIndex) {
+            return;
+        }
+
+        // 如果是最后一行，防止越界
+        if (idx == lineCount - 1) {
+            characterEndIndex = MIN(lineEndIndex, characterEndIndex);
+        }
+
+        const BOOL containsStartIndex = WMRangeContainsIndex(lineRange, characterStartIndex);
+        const BOOL containsEndIndex = WMRangeContainsIndex(lineRange, characterEndIndex);
+
+        // 一共只有一行
+        if (containsStartIndex && containsEndIndex)
+        {
+            if (characterStartIndex != characterEndIndex)
+            {
+                CGFloat startOffset = [line offsetXForCharacterAtIndex:characterStartIndex];
+                CGFloat endOffset = [line offsetXForCharacterAtIndex:characterEndIndex];
+                CGRect rect = lineRect;
+                rect.origin.x += startOffset;
+                rect.size.width = endOffset - startOffset;
+
+                block(rect, NSMakeRange(characterStartIndex, characterEndIndex - characterStartIndex), stop);
+            }
+            *stop = YES;
+        }
+        // 多行时的第一行
+        else if (containsStartIndex)
+        {
+            if (characterStartIndex != NSMaxRange(lineRange))
+            {
+                CGFloat startOffset = [line offsetXForCharacterAtIndex:characterStartIndex];
+                CGRect rect = lineRect;
+                rect.origin.x += startOffset;
+                rect.size.width -= startOffset;
+
+                block(rect, NSMakeRange(characterStartIndex, lineEndIndex - characterStartIndex), stop);
+            }
+        }
+        // 多行时的最后一行
+        else if (containsEndIndex)
+        {
+            CGFloat endOffset = [line offsetXForCharacterAtIndex:characterEndIndex];
+            CGRect rect = lineRect;
+            rect.size.width = endOffset;
+
+            block(rect, NSMakeRange(lineStartIndex, characterEndIndex - lineStartIndex), stop);
+        }
+        // 多行时的中间行
+        else if (WMRangeContainsIndex(characterRange, lineRange.location))
+        {
+            block(lineRect, lineRange, stop);
+        }
+
+        // nothing more
+        if (containsEndIndex)
+        {
+            *stop = YES;
+        }
+    }];
+}
+
 
 #pragma mark - NSCopying & NSMutableCopying
 
@@ -223,4 +307,12 @@ static NSString *WMGEllipsisCharacter = @"\u2026";
     return copy;
 }
 
+#pragma mark - Private
+
+BOOL WMRangeContainsIndex(NSRange range, NSUInteger index)
+{
+    BOOL a = (index >= range.location);
+    BOOL b = (index <= (range.location + range.length));
+    return (a && b);
+}
 @end

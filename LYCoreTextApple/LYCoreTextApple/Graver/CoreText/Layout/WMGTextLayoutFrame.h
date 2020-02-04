@@ -29,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
  *  @return WMGTextLayoutFrame
  */
 - (id)initWithCTFrame:(CTFrameRef)frameRef textLayout:(WMGTextLayout *)textLayout;
+
+- (void)enumerateEnclosingRectsForCharacterRange:(NSRange)characterRange usingBlock:(void (^)(CGRect, NSRange, BOOL *))block;
 @end
 
 NS_ASSUME_NONNULL_END
